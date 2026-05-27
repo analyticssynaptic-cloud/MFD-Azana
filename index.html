@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="es" style="background:#17100f">
+<head>
+<meta charset="UTF-8"/>
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Azana — Regulador Natural | Introducción de Marca | MFD Marketing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;500;600;700;800;900&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<style>
+:root{
+  --r:#C0141A;--rv:#D91E25;--ro:#8B0000;--vino:#6B0F1A;
+  --w:#fff;--cream:#F8F4F2;--gc:#EDE8E5;--gm:#DDD5D1;--gt:#5C5258;
+  --dark:#18100E;--dark2:#241518;--dark3:#17100f;
+  --sh:rgba(192,20,26,.14);--shf:rgba(107,15,26,.26);
+  --gh:linear-gradient(135deg,#18100E 0%,#6B0F1A 52%,#8B0000 100%);
+  --gr:linear-gradient(135deg,#D91E25 0%,#8B0000 100%);
+  --gc-soft:linear-gradient(180deg,#F8F4F2 0%,#fff 100%);
+  --ease:.3s cubic-bezier(.4,0,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--dark3)}
+body{font-family:'Barlow',sans-serif;background:var(--dark3);color:var(--w);overflow-x:hidden;line-height:1.55}
+
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:var(--gr);z-index:9999;width:0%;transition:width .1s linear}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;width:100%;z-index:1000;padding:16px 5vw;
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(24,16,14,0.92);backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(192,20,26,0.18);
+}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:3px;color:#fff;text-decoration:none;display:flex;align-items:center;gap:10px}
+.nav-logo .dot{width:10px;height:10px;background:var(--rv);border-radius:50%;box-shadow:0 0 12px var(--rv)}
+.nav-badge{
+  font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;
+  color:rgba(255,255,255,0.6);text-transform:uppercase;
+  border:1px solid rgba(255,255,255,0.14);padding:7px 16px;border-radius:40px;
+}
+.nav-badge em{color:var(--rv);font-style:normal;font-weight:800}
+
+/* === COMMON SECTION === */
+section{padding:110px 5vw;position:relative}
+.container{max-width:1280px;margin:0 auto;position:relative;z-index:2}
+.section-tag{
+  display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;
+  letter-spacing:4px;color:var(--rv);text-transform:uppercase;margin-bottom:14px;
+}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,6vw,82px);line-height:.95;letter-spacing:-1px;margin-bottom:18px;color:#fff}
+.section-title em{color:var(--rv);font-style:normal}
+.divider{width:80px;height:4px;background:var(--gr);margin:22px 0 28px;border-radius:2px}
+.section-lead{font-size:1.1rem;line-height:1.7;color:rgba(255,255,255,.68);max-width:780px;font-weight:300}
+
+/* DARK / LIGHT MODIFIERS */
+.bg-dark{background:var(--dark3);color:#fff}
+.bg-light{background:var(--cream);color:var(--dark)}
+.bg-white{background:#fff;color:var(--dark)}
+.bg-gradient{background:var(--gh);color:#fff;overflow:hidden}
+.bg-gradient::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 20% 30%,rgba(217,30,37,.3),transparent 55%),
+             radial-gradient(circle at 80% 70%,rgba(139,0,0,.4),transparent 55%);
+  z-index:0;
+}
+.bg-light .section-title,.bg-white .section-title{color:var(--dark)}
+.bg-light .section-lead,.bg-white .section-lead{color:var(--gt)}
+
+/* === HERO === */
+#hero{
+  position:relative;min-height:100vh;overflow:hidden;
+  background:var(--gh);display:flex;align-items:center;
+  padding:140px 5vw 80px;
+}
+#hero::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 22% 32%,rgba(217,30,37,.34),transparent 56%),
+             radial-gradient(circle at 78% 68%,rgba(139,0,0,.45),transparent 56%);
+  z-index:1;
+}
+#hero .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.12;z-index:0}
+.hero-orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.55;z-index:1}
+.hero-orb-1{width:540px;height:540px;background:var(--rv);top:-180px;right:-120px;animation:float 14s ease-in-out infinite}
+.hero-orb-2{width:440px;height:440px;background:var(--vino);bottom:-160px;left:-100px;animation:float 16s ease-in-out infinite reverse}
+@keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,-40px)}}
+.hero-inner{position:relative;z-index:3;max-width:1180px;margin:0 auto;width:100%}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;
+  letter-spacing:4px;color:#fff;text-transform:uppercase;
+  background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.24);
+  padding:9px 22px;border-radius:40px;margin-bottom:28px;backdrop-filter:blur(10px);
+}
+.hero-eyebrow .live-dot{width:8px;height:8px;border-radius:50%;background:#7CE082;box-shadow:0 0 0 4px rgba(124,224,130,.18);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(124,224,130,.18)}50%{box-shadow:0 0 0 9px rgba(124,224,130,.06)}}
+.hero-pre{font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;letter-spacing:8px;color:rgba(255,255,255,.6);text-transform:uppercase;margin-bottom:12px;font-weight:500}
+.hero-title{
+  font-family:'Bebas Neue',sans-serif;font-size:clamp(62px,11vw,154px);line-height:.86;
+  margin-bottom:26px;letter-spacing:-2px;
+}
+.hero-title em{color:#fff;font-style:normal;display:block;text-shadow:0 4px 30px rgba(0,0,0,.4)}
+.hero-title b{display:block;background:linear-gradient(135deg,#FFD4D6 0%,#fff 60%,#FFB3B7 100%);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:400}
+.hero-desc{font-size:1.22rem;line-height:1.6;color:rgba(255,255,255,.86);max-width:840px;margin-bottom:36px;font-weight:300}
+.hero-desc strong{color:#fff;font-weight:600}
+.hero-pills{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:46px}
+.pill{
+  font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;letter-spacing:2px;
+  text-transform:uppercase;padding:9px 18px;border-radius:30px;
+  background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.24);color:#fff;
+}
+.pill.red{background:#fff;color:var(--ro);border-color:#fff;font-weight:700}
+.hero-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;border-top:1px solid rgba(255,255,255,.18);padding-top:32px}
+.hero-stat .num{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5vw,66px);line-height:1;color:#fff;margin-bottom:6px}
+.hero-stat .lbl{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.65)}
+.scroll-cue{
+  position:absolute;bottom:28px;left:50%;transform:translateX(-50%);
+  font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:4px;
+  color:rgba(255,255,255,.55);text-transform:uppercase;z-index:3;
+}
+.scroll-cue::after{content:'';display:block;width:1px;height:34px;background:rgba(255,255,255,.4);margin:10px auto 0;animation:scrollDown 2s infinite}
+@keyframes scrollDown{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* === POR QUÉ MFD PARA AZANA (LIGHT SECTION) === */
+#por-que{background:var(--gc-soft)}
+.pq-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:60px;align-items:center;margin-top:50px}
+.pq-text p.lead{font-size:1.1rem;line-height:1.75;color:var(--gt);margin-bottom:20px;font-weight:300}
+.pq-text p.lead strong{color:var(--dark);font-weight:700}
+.pq-context{background:#fff;padding:30px 32px;border-radius:18px;border-left:5px solid var(--r);box-shadow:0 14px 40px rgba(0,0,0,.06);margin-top:24px}
+.pq-context .ct-tag{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;color:var(--r);text-transform:uppercase;margin-bottom:10px;display:block}
+.pq-context p{font-size:.98rem;color:var(--dark);font-style:italic;line-height:1.6}
+.pq-cards{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.pq-card{background:#fff;border-radius:16px;padding:26px 22px;border:1px solid var(--gc);transition:transform var(--ease),box-shadow var(--ease),border-color var(--ease)}
+.pq-card:hover{transform:translateY(-6px);border-color:var(--r);box-shadow:0 22px 40px rgba(192,20,26,.12)}
+.pq-icon{width:48px;height:48px;border-radius:12px;background:rgba(192,20,26,.08);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--r)}
+.pq-icon svg{width:24px;height:24px}
+.pq-card-title{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:1.5px;color:var(--dark);margin-bottom:8px;line-height:1.1}
+.pq-card-text{font-size:.92rem;color:var(--gt);line-height:1.5;font-weight:300}
+
+/* === PILARES AZANA (DARK) === */
+#portafolio{background:linear-gradient(180deg,#17100f 0%,#1a1010 100%)}
+.camp-intro{display:grid;grid-template-columns:1.3fr 1fr;gap:50px;align-items:end;margin-bottom:56px}
+.camp-intro .section-lead{margin-bottom:0}
+.camp-intro-stats{display:flex;gap:30px;justify-content:flex-end}
+.cis{text-align:right}
+.cis-num{font-family:'Bebas Neue',sans-serif;font-size:2.6rem;color:var(--rv);line-height:1}
+.cis-lbl{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:2.5px;color:rgba(255,255,255,.55);text-transform:uppercase;margin-top:4px;display:block}
+.camp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.camp-card{
+  position:relative;background:linear-gradient(160deg,rgba(36,21,24,.95) 0%,rgba(24,16,14,.95) 100%);
+  border:1px solid rgba(192,20,26,.22);border-radius:24px;overflow:hidden;
+  transition:transform var(--ease),border-color var(--ease),box-shadow var(--ease);
+}
+.camp-card:hover{transform:translateY(-8px);border-color:var(--rv);box-shadow:0 28px 60px var(--shf)}
+.camp-card::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:var(--gr)}
+.camp-header{padding:28px 28px 22px;border-bottom:1px solid rgba(255,255,255,.08)}
+.camp-row1{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:10px}
+.camp-badge{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:3px;color:var(--rv);background:rgba(217,30,37,.12);border:1px solid rgba(217,30,37,.35);padding:5px 12px;border-radius:30px;text-transform:uppercase}
+.camp-status{display:flex;align-items:center;gap:8px;font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:2px;color:#7CE082;text-transform:uppercase;font-weight:600}
+.status-dot{width:9px;height:9px;background:#7CE082;border-radius:50%;box-shadow:0 0 0 4px rgba(124,224,130,.18);animation:pulse 2s infinite}
+.camp-name{font-family:'Bebas Neue',sans-serif;font-size:2.8rem;letter-spacing:2px;color:#fff;line-height:1;margin-top:6px}
+.camp-tagline{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:2.5px;color:rgba(255,255,255,.55);text-transform:uppercase;margin-top:4px}
+.camp-body{padding:24px 28px 28px}
+.camp-row{margin-bottom:18px}
+.camp-label{display:block;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;color:rgba(255,255,255,.55);text-transform:uppercase;margin-bottom:8px}
+.camp-value{font-size:.95rem;line-height:1.55;color:rgba(255,255,255,.82);font-weight:300}
+.camp-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.camp-tag{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:1.5px;color:rgba(255,255,255,.7);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:4px 10px;border-radius:20px;text-transform:uppercase;font-weight:500}
+.camp-kpi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08)}
+.flow-block{margin-top:10px;background:linear-gradient(135deg,rgba(217,30,37,.14) 0%,rgba(139,0,0,.10) 100%);border:1px solid rgba(217,30,37,.35);border-radius:14px;padding:16px 18px;position:relative;overflow:hidden}
+.flow-block::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gr)}
+.flow-title{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:2px;color:var(--rv);margin-bottom:6px}
+.flow-desc{font-size:.86rem;color:rgba(255,255,255,.72);line-height:1.55;font-weight:300}
+.flow-badge{display:inline-flex;align-items:center;gap:6px;font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:2.5px;color:#fff;background:rgba(217,30,37,.22);border:1px solid rgba(217,30,37,.45);padding:4px 12px;border-radius:20px;text-transform:uppercase;margin-bottom:10px}
+.flow-badge .fb-dot{width:7px;height:7px;border-radius:50%;background:var(--rv);box-shadow:0 0 8px var(--rv)}
+.camp-kpi{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px 12px;text-align:center;transition:background var(--ease),border-color var(--ease)}
+.camp-kpi:hover{background:rgba(217,30,37,.10);border-color:rgba(217,30,37,.35)}
+.camp-kpi-val{display:block;font-family:'Bebas Neue',sans-serif;font-size:1.9rem;color:var(--rv);line-height:1;margin-bottom:4px}
+.camp-kpi-lbl{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:2px;color:rgba(255,255,255,.65);text-transform:uppercase}
+
+/* === 100% COBERTURA (GRADIENT RED) === */
+#cobertura{background:var(--gh);position:relative;overflow:hidden;padding:130px 5vw}
+#cobertura::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 75% 25%,rgba(217,30,37,.32),transparent 50%),
+             radial-gradient(circle at 25% 75%,rgba(139,0,0,.38),transparent 50%);
+}
+.cov-headline{text-align:center;margin-bottom:60px}
+.cov-headline .section-tag{color:#fff;opacity:.9}
+.cov-headline .section-title{font-size:clamp(56px,9vw,118px);margin-bottom:0;color:#fff}
+.cov-big{font-family:'Bebas Neue',sans-serif;font-size:clamp(140px,24vw,340px);line-height:.82;background:linear-gradient(135deg,#fff 0%,#FFD4D6 50%,#fff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-8px;margin:14px 0;filter:drop-shadow(0 6px 30px rgba(0,0,0,.35))}
+.cov-big sup{font-size:.32em;color:#fff;-webkit-text-fill-color:#fff;vertical-align:top;margin-left:8px}
+.cov-headline p{color:rgba(255,255,255,.9);margin:0 auto;text-align:center;max-width:760px;font-size:1.15rem;font-weight:300;line-height:1.65}
+.cov-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:60px}
+.cov-card{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);border-radius:18px;padding:30px 22px;text-align:center;backdrop-filter:blur(14px);transition:all var(--ease)}
+.cov-card:hover{transform:translateY(-6px);background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.4)}
+.cov-num{font-family:'Bebas Neue',sans-serif;font-size:3.6rem;color:#fff;line-height:1;margin-bottom:6px;letter-spacing:-1px}
+.cov-lbl{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:2.5px;color:rgba(255,255,255,.92);text-transform:uppercase;font-weight:600;margin-bottom:6px}
+.cov-sub{font-size:.83rem;color:rgba(255,255,255,.6);font-weight:300;line-height:1.4}
+
+/* === PROCESOS DE EJECUCIÓN (LIGHT) === */
+#procesos{background:var(--cream)}
+.exec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
+.exec-card{background:#fff;border:1px solid var(--gc);border-radius:18px;padding:32px 28px;transition:all var(--ease);position:relative;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,.04)}
+.exec-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--gr);transform:scaleX(0);transform-origin:left;transition:transform var(--ease)}
+.exec-card:hover{transform:translateY(-8px);border-color:var(--r);box-shadow:0 22px 50px rgba(192,20,26,.14)}
+.exec-card:hover::before{transform:scaleX(1)}
+.exec-icon{width:56px;height:56px;background:rgba(192,20,26,.08);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--r);transition:background var(--ease),color var(--ease)}
+.exec-icon svg{width:28px;height:28px}
+.exec-card:hover .exec-icon{background:var(--r);color:#fff}
+.exec-title{font-family:'Bebas Neue',sans-serif;font-size:1.55rem;color:var(--dark);letter-spacing:1.5px;margin-bottom:12px}
+.exec-desc{font-size:.95rem;line-height:1.55;color:var(--gt);margin-bottom:18px;font-weight:300}
+.exec-list{list-style:none;padding:0;margin:0}
+.exec-item{position:relative;padding:6px 0 6px 22px;font-size:.88rem;color:var(--dark);font-weight:400}
+.exec-item::before{content:'▸';position:absolute;left:0;color:var(--r);font-weight:700}
+
+/* === GALERÍA COVERFLOW (DARK) === */
+#galeria{background:#17100f;padding-top:130px;padding-bottom:130px}
+.gal-header{text-align:center;max-width:780px;margin:0 auto 60px}
+.gal-header .divider{margin:22px auto 28px}
+.gal-header .section-lead{margin-left:auto;margin-right:auto;color:rgba(255,255,255,.66)}
+
+.gal-stage{
+  position:relative;max-width:1280px;margin:0 auto;
+  height:clamp(380px,55vw,560px);
+  display:flex;align-items:center;justify-content:center;
+  perspective:1600px;
+  overflow:hidden;
+}
+.gal-slide{
+  position:absolute;
+  width:min(62%,720px);aspect-ratio:16/10;
+  border-radius:18px;overflow:hidden;
+  box-shadow:0 30px 60px rgba(0,0,0,.55);
+  transition:transform .85s cubic-bezier(.4,0,.2,1),opacity .85s ease,filter .85s ease;
+  cursor:pointer;
+  background:#0d0807;
+}
+.gal-slide img{width:100%;height:100%;object-fit:cover;display:block}
+.gal-slide.active{transform:translateX(0) scale(1) rotateY(0);opacity:1;z-index:5;filter:brightness(1)}
+.gal-slide.prev{transform:translateX(-58%) scale(.72) rotateY(12deg);opacity:.5;z-index:3;filter:brightness(.55)}
+.gal-slide.next{transform:translateX(58%) scale(.72) rotateY(-12deg);opacity:.5;z-index:3;filter:brightness(.55)}
+.gal-slide.far-prev{transform:translateX(-95%) scale(.5) rotateY(20deg);opacity:0;z-index:1;pointer-events:none}
+.gal-slide.far-next{transform:translateX(95%) scale(.5) rotateY(-20deg);opacity:0;z-index:1;pointer-events:none}
+.gal-slide.hidden{opacity:0;z-index:0;pointer-events:none;transform:scale(.4)}
+.gal-slide-overlay{position:absolute;left:0;right:0;bottom:0;padding:60px 28px 22px;background:linear-gradient(to top,rgba(0,0,0,.9) 0%,rgba(0,0,0,.35) 60%,transparent 100%);pointer-events:none;opacity:0;transition:opacity .5s ease}
+.gal-slide.active .gal-slide-overlay{opacity:1}
+.gal-slide-label{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:3px;color:#fff;text-transform:uppercase}
+.gal-slide-label em{color:var(--rv);font-style:normal}
+
+.gal-controls{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:36px;flex-wrap:wrap}
+.gal-btn{
+  background:rgba(255,255,255,.06);color:#fff;border:1px solid rgba(255,255,255,.14);
+  width:48px;height:48px;border-radius:50%;cursor:pointer;
+  font-size:16px;transition:all var(--ease);
+  display:flex;align-items:center;justify-content:center;
+}
+.gal-btn:hover{background:var(--r);border-color:var(--r);transform:scale(1.08)}
+.gal-counter{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:3px;color:#fff;min-width:80px;text-align:center}
+.gal-counter .total{color:rgba(255,255,255,.5)}
+.gal-dots{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;max-width:440px;margin-top:14px}
+.gal-dot{width:7px;height:7px;background:rgba(255,255,255,.25);border-radius:50%;cursor:pointer;transition:all var(--ease);border:none;padding:0}
+.gal-dot.active{background:var(--rv);transform:scale(1.6);box-shadow:0 0 10px var(--rv)}
+
+.gal-loading{display:flex;align-items:center;justify-content:center;width:100%;height:100%;color:rgba(255,255,255,.5);font-family:'Barlow Condensed',sans-serif;letter-spacing:3px;font-size:14px;text-transform:uppercase}
+.gal-loading::before{content:'';display:inline-block;width:14px;height:14px;border:2px solid rgba(255,255,255,.2);border-top-color:var(--rv);border-radius:50%;animation:spin 1s linear infinite;margin-right:12px;vertical-align:middle}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* === INDICADORES BI (WHITE) === */
+#indicadores{background:#fff}
+.kpi-intro{display:grid;grid-template-columns:1.3fr 1fr;gap:50px;align-items:center;margin-bottom:50px}
+.kpi-intro .quote-card{background:var(--cream);padding:32px 34px;border-radius:18px;border-left:5px solid var(--r)}
+.kpi-intro .quote-card .qc-tag{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:3px;color:var(--r);font-weight:700;text-transform:uppercase;margin-bottom:10px;display:block}
+.kpi-intro .quote-card p{font-size:1rem;line-height:1.6;color:var(--dark);font-weight:400;font-style:italic}
+.kpi-intro .quote-card .qc-author{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:2px;color:var(--gt);margin-top:14px;display:block;text-transform:uppercase;font-style:normal}
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.kpi-card{background:#fff;border:1px solid var(--gc);border-radius:16px;padding:28px 22px;text-align:center;transition:all var(--ease);position:relative;overflow:hidden}
+.kpi-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--gr);transform:scaleY(0);transform-origin:top;transition:transform var(--ease)}
+.kpi-card:hover{border-color:var(--r);transform:translateY(-4px);box-shadow:0 16px 36px rgba(192,20,26,.12)}
+.kpi-card:hover::before{transform:scaleY(1)}
+.kpi-num{font-family:'Bebas Neue',sans-serif;font-size:3.2rem;color:var(--r);line-height:1;letter-spacing:-1px;margin-bottom:6px}
+.kpi-lbl{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:2.5px;color:var(--dark);text-transform:uppercase;font-weight:700;margin-bottom:6px}
+.kpi-sub{font-size:.82rem;color:var(--gt);font-weight:300;line-height:1.4}
+.kpi-divider{margin:48px 0 32px;display:flex;align-items:center;gap:20px}
+.kpi-divider::before,.kpi-divider::after{content:'';flex:1;height:1px;background:var(--gc)}
+.kpi-divider span{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:4px;color:var(--gt);text-transform:uppercase;font-weight:700}
+
+/* === PROPUESTA CTA (RED GRADIENT) === */
+#propuesta{background:var(--gh);position:relative;overflow:hidden}
+#propuesta::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 30% 40%,rgba(217,30,37,.32),transparent 55%),
+             radial-gradient(circle at 70% 60%,rgba(139,0,0,.4),transparent 55%);
+}
+.prop-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
+.prop-text .section-tag{color:#fff;opacity:.85}
+.prop-text .section-title{color:#fff}
+.prop-text p{color:rgba(255,255,255,.88);font-size:1.1rem;line-height:1.7;margin-bottom:24px;font-weight:300}
+.prop-text p strong{color:#fff;font-weight:700}
+.prop-checks{list-style:none;padding:0;margin:20px 0 28px}
+.prop-checks li{display:flex;align-items:flex-start;gap:14px;color:#fff;padding:8px 0;font-size:1rem;font-weight:400}
+.prop-checks li svg{flex-shrink:0;width:22px;height:22px;color:#fff;margin-top:2px;background:rgba(255,255,255,.18);padding:4px;border-radius:50%}
+.prop-card{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.24);border-radius:24px;padding:42px 38px;backdrop-filter:blur(16px)}
+.prop-card-tag{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:3px;color:#fff;text-transform:uppercase;font-weight:700;opacity:.7;margin-bottom:10px;display:block}
+.prop-card-title{font-family:'Bebas Neue',sans-serif;font-size:2.4rem;letter-spacing:1.5px;color:#fff;line-height:1;margin-bottom:24px}
+.prop-card-row{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.18)}
+.prop-card-row:last-of-type{border-bottom:none}
+.prop-card-row .pc-lbl{font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:2px;color:rgba(255,255,255,.75);text-transform:uppercase;font-weight:600}
+.prop-card-row .pc-val{font-family:'Bebas Neue',sans-serif;font-size:1.7rem;color:#fff;letter-spacing:1px}
+.prop-cta{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--ro);padding:16px 32px;border-radius:50px;font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:3px;font-weight:800;text-transform:uppercase;text-decoration:none;margin-top:22px;transition:transform var(--ease),box-shadow var(--ease)}
+.prop-cta:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(0,0,0,.3)}
+
+/* === FOOTER === */
+footer{background:#0d0707;padding:60px 5vw 36px;text-align:center;border-top:1px solid rgba(192,20,26,.2)}
+.footer-brand{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:4px;color:#fff;margin-bottom:8px}
+.footer-brand span{color:var(--rv)}
+.footer-tag{font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:3px;color:rgba(255,255,255,.5);text-transform:uppercase;margin-bottom:18px}
+.footer-text{font-size:.84rem;color:rgba(255,255,255,.4);margin-top:6px;font-weight:300}
+
+/* === RESPONSIVE === */
+@media(max-width:980px){
+  .camp-grid{grid-template-columns:1fr 1fr}
+  .cov-grid{grid-template-columns:repeat(2,1fr)}
+  .exec-grid{grid-template-columns:1fr 1fr}
+  .pq-grid,.camp-intro,.kpi-intro,.prop-grid{grid-template-columns:1fr;gap:30px}
+  .camp-intro-stats{justify-content:flex-start}
+  .cis{text-align:left}
+  .kpi-grid{grid-template-columns:repeat(3,1fr)}
+  .hero-meta{grid-template-columns:1fr 1fr;gap:20px}
+  section{padding:80px 5vw}
+}
+@media(max-width:600px){
+  .camp-grid{grid-template-columns:1fr}
+  .cov-grid,.exec-grid,.pq-cards,.kpi-grid,.hero-meta{grid-template-columns:1fr}
+  nav{padding:14px 4vw}
+  .nav-logo{font-size:1.15rem}
+  .nav-badge{font-size:9px;padding:5px 10px}
+  .gal-slide{width:80%}
+  .gal-slide.prev,.gal-slide.next{transform:translateX(-65%) scale(.6) rotateY(12deg)}
+  .gal-slide.next{transform:translateX(65%) scale(.6) rotateY(-12deg)}
+  .prop-card{padding:30px 24px}
+}
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="pbar"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo"><span class="dot"></span>MFD Marketing</a>
+  <span class="nav-badge">Lanzamiento de Marca · <em>Azana Colombia</em></span>
+</nav>
+
+<!-- ╔══════════════ HERO ══════════════╗ -->
+<section id="hero">
+  <img class="hero-bg" src="https://images.pexels.com/photos/1092430/pexels-photo-1092430.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1800&h=950" alt="" loading="eager">
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow"><span class="live-dot"></span>Introducción de Producto · Azana Fibra Natural</div>
+    <p class="hero-pre">Lanzamiento Cali · Bogotá · Medellín</p>
+    <h1 class="hero-title">
+      <em>Azana</em>
+      <b>Regulador Natural</b>
+    </h1>
+    <p class="hero-desc">Operación de lanzamiento de marca enfocada en <strong>reconocimiento, generación de leales, conversión y validación de versatilidad</strong>. Azana desplegado en tres ciudades clave con activaciones en múltiples superficies, muestreo directo, degustaciones y educación sobre diferentes formas de consumo.</p>
+    <div class="hero-pills">
+      <span class="pill red">Fibra Natural 100%</span>
+      <span class="pill">Reconocimiento de Marca</span>
+      <span class="pill">Múltiples Preparaciones</span>
+      <span class="pill">Generación de Leales</span>
+    </div>
+    <div class="hero-meta">
+      <div class="hero-stat"><div class="num">1.2K</div><div class="lbl">Muestras Entregadas</div></div>
+      <div class="hero-stat"><div class="num">480</div><div class="lbl">Consumidores Contactados</div></div>
+      <div class="hero-stat"><div class="num">3</div><div class="lbl">Ciudades Principales</div></div>
+      <div class="hero-stat"><div class="num">20</div><div class="lbl">Impulsadoras Activas</div></div>
+    </div>
+  </div>
+  <div class="scroll-cue">Continuar</div>
+</section>
+
+<!-- ╔══════════════ POR QUÉ MFD PARA AZANA ══════════════╗ -->
+<section id="por-que" class="bg-light">
+  <div class="container">
+    <span class="section-tag">Sobre Azana</span>
+    <h2 class="section-title">Fibra que conecta<br>con tu <em>salud</em></h2>
+    <div class="divider"></div>
+
+    <div class="pq-grid">
+      <div class="pq-text">
+        <p class="lead"><strong>Azana</strong> es una solución natural para la salud digestiva formulada con ingredientes 100% naturales. Su propuesta es simple: bienestar integrado a la rutina diaria del consumidor colombiano sin sacrificar flexibilidad ni sabor.</p>
+        <p class="lead">El diferencial de Azana está en su <strong>versatilidad absoluta</strong>: se adapta a cualquier momento del día, se mezcla con lo que ya consumes. No es un suplemento incómodo — es un aliado que cabe en el desayuno, en el batido, en el yogurt, en lo que prefieras. Eso es lo que buscaba el consumidor: solución sin sacrificio.</p>
+        <div class="pq-context">
+          <span class="ct-tag">Propuesta de Valor</span>
+          <p>"Azana no es medicamento que tomas porque tienes que tomar. Es un aliado de tu bienestar que cabe en tu vida como es, sin complicaciones."</p>
+        </div>
+      </div>
+
+      <div class="pq-cards">
+        <div class="pq-card">
+          <div class="pq-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 1 10 10v1H2v-1a10 10 0 0 1 10-10z"/><path d="M8 14h8"/></svg>
+          </div>
+          <h3 class="pq-card-title">100% Natural</h3>
+          <p class="pq-card-text">Formulación con ingredientes naturales. Bienestar sin químicos, sin sorpresas — puro beneficio para la salud.</p>
+        </div>
+        <div class="pq-card">
+          <div class="pq-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+          </div>
+          <h3 class="pq-card-title">Versatilidad Absoluta</h3>
+          <p class="pq-card-text">Se adapta a tu rutina: desayuno, batido, yogurt, lo que prefieras. El consumidor decide cómo integrarla sin sacrificio.</p>
+        </div>
+        <div class="pq-card">
+          <div class="pq-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11z"/></svg>
+          </div>
+          <h3 class="pq-card-title">Bienestar Real Validado</h3>
+          <p class="pq-card-text">Resultados percibidos en corto tiempo. Diseñado para que funcione en tu cuerpo sin complicaciones.</p>
+        </div>
+        <div class="pq-card">
+          <div class="pq-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          </div>
+          <h3 class="pq-card-title">Activación en Terreno</h3>
+          <p class="pq-card-text">20 impulsadoras capacitadas en tres ciudades, generando degustaciones y educando sobre Azana en cada punto de venta.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════ PILARES LANZAMIENTO ══════════════╗ -->
+<section id="portafolio" class="bg-dark">
+  <div class="container">
+    <span class="section-tag">Estrategia de Lanzamiento</span>
+    <h2 class="section-title">Tres pilares de<br><em>activación</em></h2>
+    <div class="divider"></div>
+
+    <div class="camp-intro">
+      <p class="section-lead">El lanzamiento de Azana en Colombia se estructuró en tres frentes simultáneos: Reconocimiento de Marca que posicione a Azana como la solución natural de tránsito digestivo, Generación de Leales a través de demostración de versatilidad, y Conversión inmediata mediante educación sobre bondades y facilidad de consumo.</p>
+      <div class="camp-intro-stats">
+        <div class="cis"><div class="cis-num">3</div><span class="cis-lbl">Ciudades</span></div>
+        <div class="cis"><div class="cis-num">20</div><span class="cis-lbl">Impulsadoras</span></div>
+        <div class="cis"><div class="cis-num">8</div><span class="cis-lbl">Semanas</span></div>
+      </div>
+    </div>
+
+    <div class="camp-grid">
+
+      <!-- RECONOCIMIENTO -->
+      <div class="camp-card" data-campaign="reconocimiento">
+        <div class="camp-header">
+          <div class="camp-row1">
+            <span class="camp-badge">Fase 1 · Top of Mind</span>
+            <div class="camp-status"><span class="status-dot"></span><span>Ejecutada</span></div>
+          </div>
+          <h3 class="camp-name">RECONOCIMIENTO</h3>
+          <span class="camp-tagline">Posicionamiento de Marca Natural</span>
+        </div>
+        <div class="camp-body">
+          <div class="camp-row">
+            <span class="camp-label">Objetivo Estratégico</span>
+            <p class="camp-value">Establecer top-of-mind de Azana como la fibra natural de manzana en el consumidor colombiano. Diferenciación clara: 100% natural, sin químicos, solución inteligente para salud digestiva.</p>
+          </div>
+          <div class="camp-row">
+            <span class="camp-label">Canales de Activación</span>
+            <div class="camp-tags">
+              <span class="camp-tag">Supermercados · Tiendas · Puntos Especializados</span>
+              <span class="camp-tag">Supermercados Premium</span>
+              <span class="camp-tag">Puntos de Salud Natural</span>
+            </div>
+          </div>
+          <div class="camp-row">
+            <span class="camp-label">Mecánica de Lanzamiento</span>
+            <div class="flow-block">
+              <div class="flow-badge"><span class="fb-dot"></span>Semanas 1-3</div>
+              <div class="flow-title">Muestreo + Educación</div>
+              <p class="flow-desc">Impulsadoras en PDV presentando Azana, hablando sobre los beneficios de Azana, y su diferencia respecto a competidores. Contacto directo cara a cara que genera confianza inmediata en el producto.</p>
+            </div>
+          </div>
+          <div class="camp-kpi-grid">
+            <div class="camp-kpi"><span class="camp-kpi-val">430</span><span class="camp-kpi-lbl">Muestras</span></div>
+            <div class="camp-kpi"><span class="camp-kpi-val">158</span><span class="camp-kpi-lbl">Encuestas Top of Mind</span></div>
+            <div class="camp-kpi"><span class="camp-kpi-val">82%</span><span class="camp-kpi-lbl">Recuerdo de Marca</span></div>
+            <div class="camp-kpi"><span class="camp-kpi-val">4.2/5</span><span class="camp-kpi-lbl">Percepción Natural</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VERSATILIDAD -->
+      <div class="camp-card" data-campaign="versatilidad">
+        <div class="camp-header">
+          <div class="camp-row1">
+            <span class="camp-badge">Fase 2 · Diferenciación</span>
+            <div class="camp-status"><span class="status-dot"></span><span>Ejecutada</span></div>
+          </div>
+          <h3 class="camp-name">VERSATILIDAD</h3>
+          <span class="camp-tagline">Múltiples Formas de Consumir</span>
+        </div>
+        <div class="camp-body">
+          <div class="camp-row">
+            <span class="camp-label">Objetivo Estratégico</span>
+            <p class="camp-value">Demostrar que Azana no es un suplemento incómodo — es un ingrediente flexible que adapta a la vida real del consumidor. Agua, yogurt, batidos, cereales, postres: Azana cabe en cualquier lugar.</p>
+          </div>
+          <div class="camp-row">
+            <span class="camp-label">Canales de Activación</span>
+            <div class="camp-tags">
+              <span class="camp-tag">Demostraciones en PDV</span>
+              <span class="camp-tag">Zonas de Alto Tráfico</span>
+              <span class="camp-tag">Puntos Naturales y Bienestar</span>
+            </div>
+          </div>
+          <div class="camp-row">
+            <span class="camp-label">Demostración Especial</span>
+            <div class="flow-block">
+              <div class="flow-badge"><span class="fb-dot"></span>Semanas 3-5</div>
+              <div class="flow-title">AZANA EN DIFERENTES PREPARACIONES</div>
+              <p class="flow-desc">Impulsadoras demuestran Azana en vivo: agua simple, yogurt, batido de frutas, cereal matutino. El consumidor prueba en ese momento y experimenta que Azana se integra perfecto, sin cambiar sabores, sin esfuerzo. Eso genera el "¡Ah, claro! Eso puedo hacerlo yo" que convierte en comprador.</p>
+            </div>
+          </div>
+          <div class="camp-kpi-grid">
+            <div class="camp-kpi"><span class="camp-kpi-val">380</span><span class="camp-kpi-lbl">Muestras</span></div>
+            <div class="camp-kpi"><span class="camp-kpi-val">144</span><span class="camp-kpi-lbl">Pruebas en Punto</span></div>
+            <div class="camp-kpi"><span class="camp-kpi-val">87%</span><span class="camp-kpi-lbl">Intención Compra</span></div>
+            <div class="camp-kpi"><span class="camp-kpi-val">4.5/5</span><span class="camp-kpi-lbl">Facilidad de Uso</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONVERSIÓN -->
+      <div class="camp-card" data-campaign="conversion">
+        <div class="camp-header">
+          <div class="camp-row1">
+            <span class="camp-badge">Fase 3 · Cierre</span>
+            <div class="camp-status"><span class="status-dot"></span><span>Ejecutada</span></div>
+          </div>
+          <h3 class="camp-name">CONVERSIÓN</h3>
+          <span class="camp-tagline">De Interés a Compra Confirmada</span>
+        </div>
+        <div class="camp-body">
+          <div class="camp-row">
+            <span class="camp-label">Objetivo Estratégico</span>
+            <p class="camp-value">Convertir el interés generado en compra real. Enfoque en bondades tangibles (resultados digestivos en 30 días), garantía de devolución, y positioning como líder natural en su categoría.</p>
+          </div>
+          <div class="camp-row">
+            <span class="camp-label">Canales de Activación</span>
+            <div class="camp-tags">
+              <span class="camp-tag">Educación Continua en PDV</span>
+              <span class="camp-tag">Validación de Beneficios</span>
+              <span class="camp-tag">Generación de Ticket Inicial</span>
+            </div>
+          </div>
+          <div class="camp-row">
+            <span class="camp-label">Activación Final</span>
+            <div class="flow-block">
+              <div class="flow-badge"><span class="fb-dot"></span>Semanas 5-8</div>
+              <div class="flow-title">GENERACIÓN DE LEALES</div>
+              <p class="flow-desc">Las impulsadoras consolidan compradores iniciales entregando información sobre garantía de 30 días, fomentando recompra y recomendación. Se generan primeros usuarios leales con expectativa clara: en 30 días verás diferencia en regulación digestiva, o devolvemos tu dinero. Eso genera confianza que lleva a recompra automática.</p>
+            </div>
+          </div>
+          <div class="camp-kpi-grid">
+            <div class="camp-kpi"><span class="camp-kpi-val">380</span><span class="camp-kpi-lbl">Muestras</span></div>
+            <div class="camp-kpi"><span class="camp-kpi-val">178</span><span class="camp-kpi-lbl">Compradores Iniciales</span></div>
+            <div class="camp-kpi"><span class="camp-kpi-val">68%</span><span class="camp-kpi-lbl">Intención Recompra 30d</span></div>
+            <div class="camp-kpi"><span class="camp-kpi-val">4.6/5</span><span class="camp-kpi-lbl">Confianza en Marca</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════ COBERTURA 100% ══════════════╗ -->
+<section id="cobertura">
+  <div class="container">
+    <div class="cov-headline">
+      <span class="section-tag">Ejecución Consolidada</span>
+      <h2 class="section-title">Lanzamiento Íntegro</h2>
+      <div class="cov-big">100<sup>%</sup></div>
+      <p>Las tres fases del lanzamiento de Azana — Reconocimiento, Versatilidad, Conversión — se ejecutaron íntegras en Cali, Bogotá y Medellín. 20 impulsadoras capacitadas en el producto, protocolos de muestreo estandarizados, y educación en punto de venta que resultó en generación de primeros compradores leales.</p>
+    </div>
+
+    <div class="cov-grid">
+      <div class="cov-card">
+        <div class="cov-num">100%</div>
+        <div class="cov-lbl">Cobertura de Fases</div>
+        <div class="cov-sub">Reconocimiento + Versatilidad + Conversión</div>
+      </div>
+      <div class="cov-card">
+        <div class="cov-num">1.2K</div>
+        <div class="cov-lbl">Muestras Entregadas</div>
+        <div class="cov-sub">Contacto directo con consumidor</div>
+      </div>
+      <div class="cov-card">
+        <div class="cov-num">480</div>
+        <div class="cov-lbl">Consumidores Contactados</div>
+        <div class="cov-sub">Encuesta + Educación + Prueba</div>
+      </div>
+      <div class="cov-card">
+        <div class="cov-num">79%</div>
+        <div class="cov-lbl">Recuerdo de Marca</div>
+        <div class="cov-sub">Post activación en territorio</div>
+      </div>
+      <div class="cov-card">
+        <div class="cov-num">3</div>
+        <div class="cov-lbl">Ciudades Principales</div>
+        <div class="cov-sub">Cali + Bogotá + Medellín</div>
+      </div>
+      <div class="cov-card">
+        <div class="cov-num">78%</div>
+        <div class="cov-lbl">Intención de Compra</div>
+        <div class="cov-sub">Post contacto con impulsadora</div>
+      </div>
+      <div class="cov-card">
+        <div class="cov-num">20</div>
+        <div class="cov-lbl">Impulsadoras Activas</div>
+        <div class="cov-sub">Fuerza de campo capacitada en terreno</div>
+      </div>
+      <div class="cov-card">
+        <div class="cov-num">8</div>
+        <div class="cov-lbl">Semanas de Ejecución</div>
+        <div class="cov-sub">Lanzamiento integrado en campo</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════ PROCESOS DE EJECUCIÓN ══════════════╗ -->
+<section id="procesos" class="bg-light">
+  <div class="container">
+    <span class="section-tag">Estructura Operativa</span>
+    <h2 class="section-title">Procesos de <em>Lanzamiento</em></h2>
+    <div class="divider"></div>
+    <p class="section-lead">El lanzamiento se estructuró en seis frentes operativos, desde selección de puntos hasta medición de lealtad inicial. Cada frente con responsables claros, protocolos documentados y métricas de seguimiento en tiempo real.</p>
+
+    <div class="exec-grid">
+      <div class="exec-card">
+        <div class="exec-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3 class="exec-title">Selección de Puntos</h3>
+        <p class="exec-desc">Identificación de múltiples superficies en las tres ciudades donde confluya el target: supermercados, tiendas especializadas, puntos naturales — donde se encuentre el consumidor interesado en bienestar.</p>
+        <ul class="exec-list">
+          <li class="exec-item">Mapeo de puntos de venta estratégicos</li>
+          <li class="exec-item">Validación de tráfico y perfil consumidor</li>
+          <li class="exec-item">Coordinación de acceso en terreno</li>
+          <li class="exec-item">Confirmación de calendario ejecutivo</li>
+        </ul>
+      </div>
+
+      <div class="exec-card">
+        <div class="exec-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3 class="exec-title">Capacitación de Equipo</h3>
+        <p class="exec-desc">20 impulsadoras entrenadas en profundidad: composición de Azana, beneficios, versatilidad en preparaciones, manejo de objeciones, cierre de venta.</p>
+        <ul class="exec-list">
+          <li class="exec-item">Sesiones de product knowledge intensivas</li>
+          <li class="exec-item">Role-play de demostración en PDV</li>
+          <li class="exec-item">Manejo de preguntas técnicas</li>
+          <li class="exec-item">Protocolos de muestreo estandarizados</li>
+        </ul>
+      </div>
+
+      <div class="exec-card">
+        <div class="exec-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6-7 8 8-13 11L1 21 6 9z"/></svg>
+        </div>
+        <h3 class="exec-title">Muestreo y Degustaciones</h3>
+        <p class="exec-desc">Entrega de 1.2K muestras + degustaciones en vivo en punto de venta permitiendo que el consumidor pruebe Azana en el momento y sus múltiples formas de consumo. Contacto cara a cara que genera confianza.</p>
+        <ul class="exec-list">
+          <li class="exec-item">Distribución controlada de muestras</li>
+          <li class="exec-item">Degustaciones en preparaciones reales</li>
+          <li class="exec-item">Registro de entrega por consumidor</li>
+          <li class="exec-item">Seguimiento post-muestreo y degustación</li>
+        </ul>
+      </div>
+
+      <div class="exec-card">
+        <div class="exec-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3 class="exec-title">Educación en Punto</h3>
+        <p class="exec-desc">Impulsadoras que no solo entregan muestras — explican bondades reales, diferencia vs competencia, beneficios esperados en 30 días, garantía de devolución.</p>
+        <ul class="exec-list">
+          <li class="exec-item">Conversación sobre tránsito digestivo</li>
+          <li class="exec-item">Validación de ingredient 100% natural</li>
+          <li class="exec-item">Explicación de versatilidad en usos</li>
+          <li class="exec-item">Cierre con garantía de confianza</li>
+        </ul>
+      </div>
+
+      <div class="exec-card">
+        <div class="exec-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3 class="exec-title">Generación de Leales</h3>
+        <p class="exec-desc">Construcción de primer núcleo de compradores que vuelven. Seguimiento informal a 30 días, incentivo de recompra, creación de referencia boca a boca.</p>
+        <ul class="exec-list">
+          <li class="exec-item">Registro de primer comprador</li>
+          <li class="exec-item">Follow-up a 30 días post-compra</li>
+          <li class="exec-item">Validación de beneficios percibidos</li>
+          <li class="exec-item">Fomento de recompra y recomendación</li>
+        </ul>
+      </div>
+
+      <div class="exec-card">
+        <div class="exec-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><rect x="6" y="11" width="3" height="8"/><rect x="11" y="6" width="3" height="13"/><rect x="16" y="14" width="3" height="5"/></svg>
+        </div>
+        <h3 class="exec-title">Reportería en Tiempo Real</h3>
+        <p class="exec-desc">Dashboard de seguimiento semanal: muestras entregadas por ciudad, recuerdo de marca, intención de compra, compradores iniciales, proyección de leales.</p>
+        <ul class="exec-list">
+          <li class="exec-item">Métrica diaria de muestras distribuidas</li>
+          <li class="exec-item">Encuesta de recuerdo por ciudad</li>
+          <li class="exec-item">Tracking de convertidos a compra</li>
+          <li class="exec-item">Alertas de desviación vs plan</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════ GALERÍA COVERFLOW ══════════════╗ -->
+<section id="galeria" class="bg-dark">
+  <div class="container">
+    <div class="gal-header">
+      <span class="section-tag">Documentación Visual</span>
+      <h2 class="section-title">Lanzamiento <em>en Terreno</em></h2>
+      <div class="divider"></div>
+      <p class="section-lead">Registro fotográfico de las activaciones en Cali, Bogotá y Medellín — impulsadoras en punto de venta, demostraciones de versatilidad, contacto directo con consumidor. La prueba real del lanzamiento de marca.</p>
+    </div>
+  </div>
+
+  <div class="gal-stage" id="galStage"></div>
+
+  <div class="gal-controls" id="galControls">
+    <button class="gal-btn" id="galPrev" aria-label="Imagen anterior">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <div class="gal-counter"><span id="galCurr">1</span><span class="total"> / <span id="galTotal">1</span></span></div>
+    <button class="gal-btn" id="galNext" aria-label="Imagen siguiente">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+  <div class="gal-dots" id="galDots" style="margin:14px auto 0"></div>
+</section>
+
+<!-- ╔══════════════ INDICADORES CLAVE BI ══════════════╗ -->
+<section id="indicadores" class="bg-white">
+  <div class="container">
+    <span class="section-tag">Inteligencia de Negocio</span>
+    <h2 class="section-title">Indicadores Clave<br><em>de Performance</em></h2>
+    <div class="divider"></div>
+
+    <div class="kpi-intro">
+      <p class="section-lead">El lanzamiento de Azana en Colombia se midió en cada punto de contacto: reconocimiento de marca, intención de compra, conversión a primer comprador, y proyección de lealtad a 30 días. La inteligencia de terreno que orienta los próximos pasos de la marca.</p>
+      <div class="quote-card">
+        <span class="qc-tag">Métrica Clave</span>
+        <p>"Un lanzamiento de marca no es una activación puntual — es la construcción de tu primer núcleo de leales que sustentan crecimiento posterior. Todo se mide, todo se reporta, todo alimenta decisiones."</p>
+        <span class="qc-author">— Equipo MFD · Dirección de Lanzamientos</span>
+      </div>
+    </div>
+
+    <div class="kpi-divider"><span>Alcance & Contacto</span></div>
+    <div class="kpi-grid">
+      <div class="kpi-card"><div class="kpi-num">1.2K</div><div class="kpi-lbl">Muestras Entregadas</div><div class="kpi-sub">Contacto directo consumidor</div></div>
+      <div class="kpi-card"><div class="kpi-num">480</div><div class="kpi-lbl">Consumidores Contactados</div><div class="kpi-sub">Muestreo + Educación + Encuesta</div></div>
+      <div class="kpi-card"><div class="kpi-num">100%</div><div class="kpi-lbl">Puntos Cubiertos</div><div class="kpi-sub">Múltiples superficies planificadas</div></div>
+      <div class="kpi-card"><div class="kpi-num">3</div><div class="kpi-lbl">Ciudades Principales</div><div class="kpi-sub">Cali + Bogotá + Medellín</div></div>
+    </div>
+
+    <div class="kpi-divider"><span>Reconocimiento & Percepción</span></div>
+    <div class="kpi-grid">
+      <div class="kpi-card"><div class="kpi-num">79%</div><div class="kpi-lbl">Recuerdo de Marca</div><div class="kpi-sub">Post activación en territorio</div></div>
+      <div class="kpi-card"><div class="kpi-num">4.2/5</div><div class="kpi-lbl">Percepción Natural</div><div class="kpi-sub">Atributo diferencial vs competencia</div></div>
+      <div class="kpi-card"><div class="kpi-num">4.5/5</div><div class="kpi-lbl">Facilidad de Uso</div><div class="kpi-sub">Versatilidad validada en demo punto</div></div>
+      <div class="kpi-card"><div class="kpi-num">4.6/5</div><div class="kpi-lbl">Confianza en Marca</div><div class="kpi-sub">Post explicación de garantía</div></div>
+    </div>
+
+    <div class="kpi-divider"><span>Conversión & Lealtad Inicial</span></div>
+    <div class="kpi-grid">
+      <div class="kpi-card"><div class="kpi-num">78%</div><div class="kpi-lbl">Intención de Compra</div><div class="kpi-sub">Post contacto con impulsadora</div></div>
+      <div class="kpi-card"><div class="kpi-num">178</div><div class="kpi-lbl">Primer Comprador</div><div class="kpi-sub">Conversión real en punto</div></div>
+      <div class="kpi-card"><div class="kpi-num">68%</div><div class="kpi-lbl">Intención Recompra 30d</div><div class="kpi-sub">Proyección de leales iniciales</div></div>
+      <div class="kpi-card"><div class="kpi-num">20</div><div class="kpi-lbl">Impulsadoras Activas</div><div class="kpi-sub">Equipo capacitado en terreno</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════ PRÓXIMAS FASES ══════════════╗ -->
+<section id="propuesta">
+  <div class="container">
+    <div class="prop-grid">
+      <div class="prop-text">
+        <span class="section-tag">Fase de Consolidación</span>
+        <h2 class="section-title">Azana<br><em>Lanzamiento+</em></h2>
+        <div class="divider" style="background:#fff"></div>
+        <p>El lanzamiento inicial dejó 178 primeros compradores con intención clara de recompra. <strong>Eso es el cimiento de un negocio recurrente.</strong> Las próximas acciones se enfocan en consolidar ese núcleo, ampliar reconocimiento en nuevas ciudades, y generar palanca de recomendación boca a boca.</p>
+        <ul class="prop-checks">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Seguimiento de lealtad a 30 días post-compra inicial
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Medición de resultados percibidos en tránsito digestivo
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Plan de expansión a nuevas ciudades con aprendizajes aplicados
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Dashboard de proyección de recompra y referencia
+          </li>
+        </ul>
+      </div>
+
+      <div class="prop-card">
+        <span class="prop-card-tag">Resumen Ejecutivo</span>
+        <h3 class="prop-card-title">Lanzamiento<br>Azana Lanzamiento</h3>
+        <div class="prop-card-row"><span class="pc-lbl">Ciudades</span><span class="pc-val">3 Activas</span></div>
+        <div class="prop-card-row"><span class="pc-lbl">Muestras</span><span class="pc-val">1.2K</span></div>
+        <div class="prop-card-row"><span class="pc-lbl">Impulsadoras</span><span class="pc-val">20</span></div>
+        <div class="prop-card-row"><span class="pc-lbl">Primer Comprador</span><span class="pc-val">178</span></div>
+        <a href="#" class="prop-cta">Planificar Siguiente Fase
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════ FOOTER ══════════════╗ -->
+<footer>
+  <div class="footer-brand">MFD <span>·</span> Marketing & Eventos</div>
+  <div class="footer-tag">Ejecución · Inteligencia · Resultados</div>
+  <p class="footer-text">Azana — Regulador Natural · Lanzamiento Cali + Bogotá + Medellín</p>
+  <p class="footer-text">Todas las métricas validadas con data de campo · MFD Marketing</p>
+</footer>
+
+<script>
+const IMGS = [
+  {id:'1SrajS8LCR6Q_TP_ZuMkW7wDtsdTswEu0', lbl:'Activación Azana'},
+  {id:'1SOzFYP1yAFtq-M3Xsc4oSI8rabsTB50C', lbl:'Activación Azana'},
+  {id:'1Jc3slnrna5M_PPHnV4m0_aTJ7C1CYjGt', lbl:'Activación Azana'},
+  {id:'1lnYAETyNFFwh0DkqoCPnF5Cu9D-fRopL', lbl:'Activación Azana'},
+  {id:'1dOSzvGGv4gPmI6K2IU8pDdPc4Y2tXlN-', lbl:'Activación Azana'},
+  {id:'1NZ83IELLV6RilLaz6ergIEnI5g-RdhUQ', lbl:'Activación Azana'},
+  {id:'1vWPWippYbIbT5CERGN3RsjrgjkwJjRFT', lbl:'Activación Azana'},
+  {id:'173jaWD-9TGGuz9fbWZ_NsZwxUwuNAbaR', lbl:'Activación Azana'},
+  {id:'1YWC1yXU6Ig7KbATGGd7cemaKR399WnK0', lbl:'Activación Azana'},
+  {id:'1Q_xGJwwSfxWZG97fmtIdxwIquKjI5VLv', lbl:'Activación Azana'},
+  {id:'1UGuwnKJAWqa27-4UZBgCThePODNprNRD', lbl:'Activación Azana'},
+  {id:'1N5CC_aVV-cCjcNkciOhTxEy8-UTylEzn', lbl:'Activación Azana'},
+  {id:'1Z-fvv4kgrJGRGQdAsouQr5RzR1kD8n3w', lbl:'Activación Azana'},
+  {id:'1gKSzb56wLS-ysR-F64W26QuEjU_ovInQ', lbl:'Activación Azana'},
+  {id:'1Qtz7mqXy0cWgfRjkVAjM62br-sK4cFl5', lbl:'Activación Azana'},
+  {id:'17rblS3u1aEw62bQSIjWnbJ95pvy54DUY', lbl:'Activación Azana'},
+  {id:'1dtreeaDQkzenkaPmi0cBJpMJZQvn1Z7-', lbl:'Activación Azana'},
+  {id:'1-f2Ove87HlLG_K51ratYc_q8TECW-jhs', lbl:'Activación Azana'},
+  {id:'1YyYabwth99PJzoujbJm8co6zkSEnQe09', lbl:'Activación Azana'},
+  {id:'1yEjFbDO12VUjyx4Rkh5mwOoZ5lKtr7We', lbl:'Activación Azana'},
+  {id:'1lIREnWvaRzX6wzctlF_8I5XbZhnQETZY', lbl:'Activación Azana'},
+  {id:'1j4m4hDyCM0nZboJo90a77Lub4XK9Vvv_', lbl:'Activación Azana'},
+  {id:'1J-sAtrGyNmPbhFe6QZxKUhb5U9rhv4li', lbl:'Activación Azana'},
+  {id:'1K2DyrN--uylnkxVGWC8VusWNy77W8R-8', lbl:'Activación Azana'},
+  {id:'1MhJ7iMysz2L_fd9XJL1tYOWqXphfXx-H', lbl:'Activación Azana'},
+  {id:'1lxbBg99F1BC4-W1Iz2rclvi4touB9c9b', lbl:'Activación Azana'},
+  {id:'1GajN9p4LniLfpcpkPpRm2QxfVawdf9sA', lbl:'Activación Azana'},
+  {id:'1PjYE0lvJVxXvPfrWIQm1OK54yrPv5v7t', lbl:'Activación Azana'},
+  {id:'1DCjPz5OqN5_VhUhGDHC1s5am6dIjEenw', lbl:'Activación Azana'},
+  {id:'11aVOBWOXIsfE58yweAVxKNlFkI50P_Al', lbl:'Activación Azana'},
+  {id:'1LBIVtKwydEe6HRUHLqnDAEGM-hz73hAL', lbl:'Activación Azana'},
+  {id:'10SPPEiU45eN6LkgnCW6LWaczSlioojnA', lbl:'Activación Azana'},
+  {id:'186p84-Puu6KUvtPpFS7bs5gk5nedGlRS', lbl:'Activación Azana'},
+  {id:'1aZj7-Q-uwECjbPY4F9l2iIrjj2-sYpz1', lbl:'Activación Azana'},
+  {id:'1FJby9j0W5BWLNb2ax5C1oc3JOL9ulhWp', lbl:'Activación Azana'},
+  {id:'1ZDW3AAUttqewVLfqZKzc0DzK3wqt7pSl', lbl:'Activación Azana'},
+  {id:'1rVdSOSkN_Gng8B2D-JgjI212cY2Re7WF', lbl:'Activación Azana'},
+  {id:'1O2JLffcUKC6VmSsSGk32kP-zH0eeQmXA', lbl:'Activación Azana'},
+  {id:'1J_4Wr1raj72NShBw7nduW2mV2VKLkQDF', lbl:'Activación Azana'},
+  {id:'1lAJFsjScR1PrKMDOb76gZmF8u0a74Flv', lbl:'Activación Azana'},
+  {id:'1x7MD1_glovzdtem718Fcn-wuL_xBfBDX', lbl:'Activación Azana'},
+  {id:'1Iot8GmLYZEK0Q94R5ZRyRJeBFM_D9yNX', lbl:'Activación Azana'},
+  {id:'17RJC5qDqamfl2ywJzyA-8TPi_oClzW2n', lbl:'Activación Azana'},
+  {id:'1W2uV77khVvnD13j-DPQinGSL_XkeTJVK', lbl:'Activación Azana'},
+  {id:'1w5J3s5wiTn5898gkYsT1W4bI_bAmGcNx', lbl:'Activación Azana'},
+  {id:'18hBN576C_AfhtNUhaBY3pBPDJ4q0ZCDa', lbl:'Activación Azana'},
+  {id:'1vG0NmnYhTy2VMF2SnDnWl-LYI1RzoQk7', lbl:'Activación Azana'},
+  {id:'1FgDCsutrGZbZ2ItvvQEjWmpkHtkyxR8H', lbl:'Activación Azana'},
+  {id:'1chtRborTYENKNSfLwy7kd12jMCVAVlr7', lbl:'Activación Azana'},
+  {id:'1JT5w0joIzNt44UNmO2_VVqfvhSlw9Pn_', lbl:'Activación Azana'},
+  {id:'1FHuRDokDescctIqcPU_NhVK68fiIXH5d', lbl:'Activación Azana'},
+  {id:'1x172CBCKKmML0pFoUHIZ7jm9WaNnThbW', lbl:'Activación Azana'},
+  {id:'1h-95dxe4gcF3Hhfy6I7mpOSYrAD9cyyi', lbl:'Activación Azana'},
+  {id:'1MvQRBYy7T3pOEouGRlzX9ENCnwo7OI96', lbl:'Activación Azana'},
+  {id:'142JoffhBZGnw5WZA0Vp2tuolnFeftVTy', lbl:'Activación Azana'},
+  {id:'1xOzoaOFunlJIXa7J0e8VyAazHuf1GFgN', lbl:'Activación Azana'},
+  {id:'1ht8FWVqYcRnrThGDSLEE0IaCZlFQSpVX', lbl:'Activación Azana'}
+];
+
+(function initCoverflow(){
+  const stage    = document.getElementById('galStage');
+  const dotsBox  = document.getElementById('galDots');
+  const currEl   = document.getElementById('galCurr');
+  const totalEl  = document.getElementById('galTotal');
+  const btnPrev  = document.getElementById('galPrev');
+  const btnNext  = document.getElementById('galNext');
+
+  IMGS.forEach((img, i) => {
+    const slide = document.createElement('div');
+    slide.className = 'gal-slide hidden';
+    slide.dataset.index = i;
+    slide.innerHTML = `
+      <img src="https://lh3.googleusercontent.com/d/${img.id}"
+           alt="${img.lbl}"
+           loading="${i < 4 ? 'eager' : 'lazy'}"
+           decoding="async"
+           referrerpolicy="no-referrer"
+           onerror="this.parentElement.style.background='#1a1010'">
+      <div class="gal-slide-overlay">
+        <span class="gal-slide-label">${img.lbl}</span>
+      </div>`;
+    slide.addEventListener('click', () => { goTo(i); restart(); });
+    stage.appendChild(slide);
+
+    const dot = document.createElement('button');
+    dot.className = 'gal-dot';
+    dot.setAttribute('aria-label', 'Imagen ' + (i+1));
+    dot.addEventListener('click', () => { goTo(i); restart(); });
+    dotsBox.appendChild(dot);
+  });
+
+  totalEl.textContent = IMGS.length;
+  const slides = stage.querySelectorAll('.gal-slide');
+  const dots   = dotsBox.querySelectorAll('.gal-dot');
+  let current = 0, timer;
+
+  function render(){
+    const n = slides.length;
+    slides.forEach((s, i) => {
+      s.classList.remove('active','prev','next','far-prev','far-next','hidden');
+      if      (i === current)             s.classList.add('active');
+      else if (i === (current-1+n)%n)     s.classList.add('prev');
+      else if (i === (current+1)%n)       s.classList.add('next');
+      else if (i === (current-2+n)%n)     s.classList.add('far-prev');
+      else if (i === (current+2)%n)       s.classList.add('far-next');
+      else                                s.classList.add('hidden');
+    });
+    dots.forEach((d,i) => d.classList.toggle('active', i === current));
+    currEl.textContent = current + 1;
+  }
+
+  function goTo(n){ current = (n + slides.length) % slides.length; render(); }
+  function next(){ goTo(current + 1); }
+  function prev(){ goTo(current - 1); }
+  function start(){ timer = setInterval(next, 4500); }
+  function stop(){ clearInterval(timer); }
+  function restart(){ stop(); start(); }
+
+  btnNext.addEventListener('click', () => { next(); restart(); });
+  btnPrev.addEventListener('click', () => { prev(); restart(); });
+  stage.addEventListener('mouseenter', stop);
+  stage.addEventListener('mouseleave', start);
+
+  let tx = 0;
+  stage.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, {passive:true});
+  stage.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - tx;
+    if(Math.abs(dx) > 50){ dx > 0 ? prev() : next(); restart(); }
+  }, {passive:true});
+
+  render();
+  start();
+})();
+
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+  document.getElementById('pbar').style.width = scrolled + '%';
+});
+
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.camp-card, .cov-card, .exec-card, .pq-card, .kpi-card').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(24px)';
+  el.style.transition = 'opacity .8s ease, transform .8s ease';
+  obs.observe(el);
+});
+</script>
+
+</body>
+</html>
